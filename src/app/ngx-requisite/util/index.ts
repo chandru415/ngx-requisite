@@ -8,9 +8,9 @@ export const isNullOrUndefined = (value: any): boolean => {
 };
 
 /**
- * 
- * @param value 
- * @returns 
+ *
+ * @param value
+ * @returns
  */
 export const isDate = (value: any): boolean => {
   try {
@@ -20,11 +20,10 @@ export const isDate = (value: any): boolean => {
   }
 };
 
-
 /**
- * 
- * @param value 
- * @returns 
+ *
+ * @param value
+ * @returns
  */
 export const isObject = (value: any): boolean => {
   return !isNullOrUndefined(value) ? typeof value === 'object' : false;
@@ -39,20 +38,19 @@ export const leadZeroForMonthOrDay = (value: number): number | string => {
   return value < 10 ? `0${value}` : value;
 };
 
-
 /**
- * 
- * @param value 
- * @returns 
+ *
+ * @param value
+ * @returns
  */
 export const objectNonShadowCopy = (value: any): any => {
   return JSON.parse(JSON.stringify(value));
 };
 
 /**
- * 
- * @param value 
- * @returns 
+ *
+ * @param value
+ * @returns
  */
 export const remaingDaysHoursFormTwoDate = (
   startDate: Date,
@@ -77,9 +75,9 @@ export const remaingDaysHoursFormTwoDate = (
 };
 
 /**
- * 
- * @param value 
- * @returns 
+ *
+ * @param value
+ * @returns
  */
 export const remaingDaysHoursFormSeconds = (
   seconds: number
@@ -97,9 +95,9 @@ export const remaingDaysHoursFormSeconds = (
 };
 
 /**
- * 
- * @param value 
- * @returns 
+ *
+ * @param value
+ * @returns
  */
 const daysTimeStringFromSeconds = (
   seconds: number
