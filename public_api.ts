@@ -1,1 +1,0 @@
-export * from './src/app/ngx-requisite/ngx-requisite.module';
