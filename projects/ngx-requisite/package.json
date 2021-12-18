@@ -1,0 +1,37 @@
+{
+  "name": "ngx-requisite",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Chandra Sekhar A",
+    "email": "chandru9052@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chandru415/ngx-requisite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chandru415/ngx-requisite/issues"
+  },
+  "homepage": "https://github.com/chandru415/ngx-requisite",
+  "keywords": [
+    "angular",
+    "validations",
+    "custom validations",
+    "model driven forms",
+    "ng",
+    "abstract control",
+    "forms",
+    "reactive forms",
+    "custom",
+    "validators",
+    "validation"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^12.2.0",
+    "@angular/core": "^12.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

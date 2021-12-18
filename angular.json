@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-requisite": {
+    "ngx-requisite-dev": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngx-requisite",
+            "outputPath": "dist/ngx-requisite-dev",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -82,10 +82,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ngx-requisite:build:production"
+              "browserTarget": "ngx-requisite-dev:build:production"
             },
             "development": {
-              "browserTarget": "ngx-requisite:build:development"
+              "browserTarget": "ngx-requisite-dev:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -93,7 +93,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-requisite:build"
+            "browserTarget": "ngx-requisite-dev:build"
           }
         },
         "test": {
@@ -115,7 +115,38 @@
           }
         }
       }
+    },
+    "ngx-requisite": {
+      "projectType": "library",
+      "root": "projects/ngx-requisite",
+      "sourceRoot": "projects/ngx-requisite/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-requisite/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-requisite/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-requisite/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-requisite/src/test.ts",
+            "tsConfig": "projects/ngx-requisite/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-requisite/karma.conf.js"
+          }
+        }
+      }
     }
   },
-  "defaultProject": "ngx-requisite"
+  "defaultProject": "ngx-requisite-dev"
 }
