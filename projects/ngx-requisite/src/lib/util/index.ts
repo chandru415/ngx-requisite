@@ -1,3 +1,5 @@
+import { daysTimeStringFromSeconds } from './private';
+
 /**
  * verifies wheater object is null or undefined, if 'yes' return true.
  * @param value type any
@@ -94,33 +96,12 @@ export const remaingDaysHoursFormSeconds = (
   }
 };
 
-/**
- *
- * @param value
- * @returns
- */
-const daysTimeStringFromSeconds = (
-  seconds: number
-): {
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
-} => {
-  return {
-    days: Math.floor(seconds / 86400),
-    hours: Math.floor(seconds / 3600) % 24,
-    minutes: Math.floor(seconds / 60) % 60,
-    seconds: seconds % 60,
-  };
-};
-
 export const isEmptyInputValue = (value: any): boolean => {
   // we don't check for string here so it also works with arrays
   return value == null || value.length === 0;
-}
+};
 
 export const hasValidLength = (value: any): boolean => {
   // non-strict comparison is intentional, to check for both `null` and `undefined` values
   return value != null && typeof value.length === 'number';
-}
+};
