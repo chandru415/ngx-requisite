@@ -1,24 +1,91 @@
 # NgxRequisite
+# Description
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
+ngx-requisite library => custom Validators, Utility functions for common development.
 
-## Code scaffolding
+# Installation
 
-Run `ng generate component component-name --project ngx-requisite` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-requisite`.
-> Note: Don't forget to add `--project ngx-requisite` or else it will be added to the default project in your `angular.json` file. 
+```bash
+npm i ngx-requisite --save
+```
+# Methods 
+    - isNullOrUndefined
+    - isDate
+    - isObject
+    - leadZeroForMonthOrDay
+    - remaingDaysHoursFormTwoDate
+# Validators
 
-## Build
+## Requisite validators
 
-Run `ng build ngx-requisite` to build the project. The build artifacts will be stored in the `dist/` directory.
+- whitespace
+- isNegative
+- decimalPrecision
 
-## Publishing
+# Usage
 
-After building your library with `ng build ngx-requisite`, go to the dist folder `cd dist/ngx-requisite` and run `npm publish`.
+## Model driven
 
-## Running unit tests
+import `ReactiveFormsModule` in *app.module.ts*
 
-Run `ng test ngx-requisite` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```typescript
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
-## Further help
+import { AppComponent } from './app.component';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+@NgModule({
+    imports: [BrowserModule, ReactiveFormsModule],
+    declarations: [AppComponent],
+    bootstrap: [AppComponent]
+})
+export class AppModule {
+}
+```
+
+import `CustomValidators` in *app.component.ts*
+
+```typescript
+import { Component } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { requisiteValidators } from 'ngx-requisite';
+
+@Component({
+    selector: 'app',
+    template: require('./app.html')
+})
+export class AppComponent {
+  devForm = this.fb.group({
+    userName: ['', [requisiteValidators.whitespace]],
+  });
+
+  get controls(){
+    return this.devForm.controls;
+  }
+
+  constructor(private fb: FormBuilder) {}
+}
+```
+
+```html
+<form [formGroup]="form">
+  <input type="text" name="" id="" formControlName="userName" />
+  <div class="" *ngIf="controls.userName.hasError('whitespace')">having space</div>
+</form>
+```
+
+### isNegative
+
+```typescript
+new FormControl('', requisiteValidators.isNegative)
+```
+
+### decimalPrecision
+
+```typescript
+new FormControl('',requisiteValidators.decimalPrecision)
+```
+# For developpers
+To run the projet : `npm start`
+Don't forget to run `npm test` and `npm lint` before each pull request. Thanks !
