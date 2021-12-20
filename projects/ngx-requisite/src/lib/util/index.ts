@@ -54,7 +54,7 @@ export const objectNonShadowCopy = (value: any): any => {
  * @param value
  * @returns
  */
-export const remaingDaysHoursFormTwoDate = (
+export const remainingDaysHoursFormTwoDates = (
   startDate: Date,
   finish: Date
 ): {
@@ -81,7 +81,7 @@ export const remaingDaysHoursFormTwoDate = (
  * @param value
  * @returns
  */
-export const remaingDaysHoursFormSeconds = (
+export const remainingDaysHoursFormSeconds = (
   seconds: number
 ): {
   days: number;

@@ -11,7 +11,7 @@ import {
   isNullOrUndefined,
   isObject,
   leadZeroForMonthOrDay,
-  remaingDaysHoursFormTwoDate,
+  remainingDaysHoursFormTwoDates,
   requisiteValidators,
 } from 'projects/ngx-requisite/src/public-api';
 
@@ -56,7 +56,7 @@ export class AppComponent implements OnInit {
     console.log(isObject(null), 'isObject');
     console.log(leadZeroForMonthOrDay(9), 'leadZeroForMonthOrDay(null)');
     console.log(
-      remaingDaysHoursFormTwoDate(new Date('2021/12/10'), new Date()),
+      remainingDaysHoursFormTwoDates(new Date('2021/12/10'), new Date()),
       'leadZeroForMonthOrDay(null)'
     );
   }

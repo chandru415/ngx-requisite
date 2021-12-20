@@ -1,4 +1,3 @@
-# 
 
 <p align="center">
  <h2 align="center">NgxRequisite</h2>
@@ -26,7 +25,7 @@ npm i ngx-requisite --save
     - isDate
     - isObject
     - leadZeroForMonthOrDay
-    - remaingDaysHoursFormTwoDate
+    - remainingDaysHoursFormTwoDates
 # Validators
 
 ## Requisite validators
@@ -99,6 +98,6 @@ new FormControl('', requisiteValidators.isNegative)
 ```typescript
 new FormControl('',requisiteValidators.decimalPrecision)
 ```
-# For developpers
-To run the projet : `npm start`
+# For developers
+To run the project : `npm start`
 Don't forget to run `npm test` and `npm lint` before each pull request. Thanks !
