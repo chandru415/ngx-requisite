@@ -1,8 +1,20 @@
-# NgxRequisite
+# 
 
-# Description
-
-ngx-requisite library => custom Validators, Utility functions for common development.
+<p align="center">
+ <h2 align="center">NgxRequisite</h2>
+ <p align="center">ngx-requisite library => custom Validators, Utility functions for common development.</p>
+ <br/>
+ <p align="center">
+ <img src="https://img.shields.io/github/issues/chandru415/ngx-requisite" />
+ <img src="https://img.shields.io/github/forks/chandru415/ngx-requisite" />
+   <img src="https://img.shields.io/github/stars/chandru415/ngx-requisite" />
+  
+  <a href="https://www.npmjs.com/package/ngx-requisite">
+   <img src="https://img.shields.io/npm/dw/ngx-requisite" />
+ </a>
+ </p>
+</p>
+<br/>
 
 # Installation
 
