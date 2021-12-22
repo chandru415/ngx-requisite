@@ -1,7 +1,7 @@
 import { NgModule, Type } from '@angular/core';
-import { decimalPrecision } from './decimalPrecision/validator';
-import { isNegative } from './negativeInteger/validator';
-import { whitespace } from './whitespace/validator';
+import { decimalPrecision } from './validators/decimalPrecision';
+import { isNegative } from './validators/negativeInteger';
+import { whitespace } from './validators/whitespace';
 
 export const requisiteValidators = {
   whitespace,

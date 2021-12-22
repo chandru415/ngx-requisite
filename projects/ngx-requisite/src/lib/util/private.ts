@@ -1,5 +1,5 @@
 /**
- * Calucate number of days, hours, minutes and seconds remaining for given seconds
+ * Calculate number of days, hours, minutes and seconds remaining for given seconds
  * @param value type 'number'
  * @returns an object consists number of days, hours, minutes and seconds remaining
  */
