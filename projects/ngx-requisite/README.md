@@ -32,6 +32,10 @@ npm i ngx-requisite --save
 - whitespace
 - isNegative
 - decimalPrecision
+- lessthan
+- lessthan or equal
+- greaterthan
+- greaterthan or equal
 
 # Usage
 
@@ -63,8 +67,9 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { requisiteValidators } from 'ngx-requisite';
 
 @Component({
-    selector: 'app',
-    template: require('./app.html')
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   devForm = this.fb.group({
