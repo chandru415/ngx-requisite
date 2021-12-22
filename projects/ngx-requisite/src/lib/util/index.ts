@@ -1,7 +1,7 @@
 import { daysTimeStringFromSeconds } from './private';
 
 /**
- * verifies wheater object is null or undefined, if 'yes' return true.
+ * verifies object is null or undefined, if 'yes' return true.
  * @param value type any
  * @returns boolean
  */
