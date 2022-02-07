@@ -8,7 +8,9 @@ import { isNullOrUndefined } from '../../util';
  */
 export const decimalPrecision = (precision: number): ValidatorFn => {
   return (control: AbstractControl): ValidationErrors | null => {
-    return !isNullOrUndefined(control) && !isNaN(precision)
+    return !isNullOrUndefined(control) &&
+      !isNullOrUndefined(control?.value) &&
+      !isNaN(precision)
       ? control.value.toString().split('.')[1]
         ? control.value.toString().split('.')[1].length > precision
           ? {
