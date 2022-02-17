@@ -9,7 +9,7 @@ import { isNullOrUndefined } from '../../util';
 export const whitespace: ValidatorFn = (
   control: AbstractControl
 ): ValidationErrors | null => {
-  return !isNullOrUndefined(control)
+  return !isNullOrUndefined(control) && !isNullOrUndefined(control?.value)
     ? (control.value || '').toString().trim().length <= 0
       ? { whitespace: true }
       : null

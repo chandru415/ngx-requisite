@@ -1,3 +1,4 @@
+import { forIn } from 'lodash';
 import { daysTimeStringFromSeconds } from './private';
 
 /**
@@ -96,7 +97,12 @@ export const remainingDaysHoursFormSeconds = (
   }
 };
 
-export const isEmptyInputValue = (value: any): boolean => {
+/**
+ * verifies object length equals to 0, if 'yes' return true.
+ * @param value type any
+ * @returns boolean
+ */
+export const isEmpty = (value: any): boolean => {
   // we don't check for string here so it also works with arrays
   return value == null || value.length === 0;
 };
@@ -105,3 +111,47 @@ export const hasValidLength = (value: any): boolean => {
   // non-strict comparison is intentional, to check for both `null` and `undefined` values
   return value != null && typeof value.length === 'number';
 };
+
+/**
+ * verifies object is null or undefined and length equals to 0, if 'yes' return true.
+ * @param value type any
+ * @returns boolean
+ */
+export const isNullOrUndefinedEmpty = (value: any): boolean => {
+  return isNullOrUndefined(value) && isEmpty(value);
+};
+
+/**
+ * verifies object is empty & it's props, if 'yes' return true.
+ * @param value type any
+ * @returns boolean
+ */
+ export function isEmptyInDepth(value?: any): boolean {
+  if (isNullOrUndefined(value)) {
+    return true;
+  } else {
+    let keyLength = 0;
+    let emptyValues = 0;
+    forIn(value, (v, key) => {
+      keyLength += 1;
+      switch (typeof v) {
+        case 'boolean':
+          emptyValues += v === false ? 1 : 0;
+          break;
+
+        case 'string':
+          emptyValues += v.length <= 0 ? 1 : 0;
+          break;
+        case 'object':
+          if (isNullOrUndefined(v)) {
+            emptyValues += 1;
+          } else {
+            emptyValues += v.length <= 0 ? 1 : 0;
+          }
+
+          break;
+      }
+    });
+    return keyLength === emptyValues;
+  }
+}

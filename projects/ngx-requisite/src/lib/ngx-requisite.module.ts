@@ -1,4 +1,6 @@
 import { NgModule, Type } from '@angular/core';
+import { SafeHtmlPipe } from './pipes/safeHtml';
+import { SafeUrlPipe } from './pipes/safeUrl';
 import { decimalPrecision } from './validators/decimalPrecision';
 import { greaterthan } from './validators/greaterthan';
 import { greaterthanOrEqual } from './validators/greaterthanOrEqual';
@@ -14,14 +16,16 @@ export const requisiteValidators = {
   lessthan,
   lessthanOrEqual,
   greaterthan,
-  greaterthanOrEqual
+  greaterthanOrEqual,
 };
 
 const requisiteDirectives: any[] | Type<any> = [];
 
+const requisitePipes: any[] | Type<any> = [SafeUrlPipe, SafeHtmlPipe];
+
 @NgModule({
-  declarations: [requisiteDirectives],
+  declarations: [requisiteDirectives, requisitePipes],
   imports: [],
-  exports: [requisiteDirectives],
+  exports: [requisiteDirectives, requisitePipes],
 })
 export class NgxRequisiteModule {}
