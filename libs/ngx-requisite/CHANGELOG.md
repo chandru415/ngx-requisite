@@ -1,5 +1,12 @@
 ## Change Log:
 
+### [3.0.0]
+<h6> New</h6>
+```
+Util method : toCamelCaseKeys()
+(this will help to convert PascalCase object keys to camelCase object keys)
+
+```
 ### [1.2.0]
 <h6> New</h6>
 ```
