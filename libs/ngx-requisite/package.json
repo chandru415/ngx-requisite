@@ -1,0 +1,39 @@
+{
+  "name": "@ngx-cks@ngx-requisite",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^15.0.0",
+    "@angular/core": "^15.0.0",
+    "lodash": "^4.17.21"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "author": {
+    "name": "Chandra Sekhar A",
+    "email": "chandru9052@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chandru415/ngx-requisite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chandru415/ngx-requisite/issues"
+  },
+  "homepage": "https://github.com/chandru415/ngx-requisite",
+  "keywords": [
+    "angular",
+    "validations",
+    "custom validations",
+    "model driven forms",
+    "ng",
+    "abstract control",
+    "forms",
+    "reactive forms",
+    "custom",
+    "validators",
+    "validation",
+    "pipes",
+    "dom sanitizer"
+  ]
+}

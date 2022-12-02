@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ngx-requisite/ngx-requisite": ["libs/ngx-requisite/src/index.ts"]
+      "@ngx-cks@ngx-requisite": ["libs/ngx-requisite/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -5,6 +5,22 @@
   "sourceRoot": "libs/ngx-requisite/src",
   "prefix": "ngx-requisite",
   "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/ngx-requisite/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/ngx-requisite/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/ngx-requisite/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
