@@ -157,4 +157,25 @@ export function isEmptyInDepth(value?: any): boolean {
   }
 }
 
+export const toCamelCaseKeys = <T extends object>(
+  obj: T
+): UnCapitalizeObjectKeys<T> | UnCapitalizeObjectKeys<T[]> => {
+  return isArray(obj)
+    ? obj.map((o) => toCamelCaseKeys(o))
+    : camelCaseKeysHelper(obj);
+};
+
+export const camelCaseKeysHelper = <T extends object>(
+  obj: T
+): UnCapitalizeObjectKeys<T> => {
+  const entries = Object.entries(obj);
+
+  const mappedEntries = entries.map(([k, v]) => [
+    `${k.slice(0, 1).toLowerCase()}${k.slice(1)}`,
+    isObject(v) ? toCamelCaseKeys(v) : v,
+  ]);
+
+  return Object.fromEntries(mappedEntries) as UnCapitalizeObjectKeys<T>;
+};
+
 
