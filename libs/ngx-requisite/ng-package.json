@@ -1,0 +1,34 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/ngx-requisite",
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  },
+  "author": {
+    "name": "Chandra Sekhar A",
+    "email": "chandru9052@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chandru415/ngx-requisite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chandru415/ngx-requisite/issues"
+  },
+  "homepage": "https://github.com/chandru415/ngx-requisite",
+  "keywords": [
+    "angular",
+    "validations",
+    "custom validations",
+    "model driven forms",
+    "ng",
+    "abstract control",
+    "forms",
+    "reactive forms",
+    "custom",
+    "validators",
+    "validation",
+    "pipes",
+    "dom sanitizer"
+  ]
+}
