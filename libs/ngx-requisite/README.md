@@ -5,7 +5,7 @@ ngx-requisite library - custom Validators, Utility functions for common developm
 # Installation
 
 ```bash
-npm i ngx-requisite --save
+npm i @slck/ngx-requisite --save --save
 ```
 # Methods 
     - isNullOrUndefined
@@ -57,7 +57,7 @@ import `CustomValidators` in *app.component.ts*
 ```typescript
 import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { requisiteValidators } from 'ngx-requisite';
+import { requisiteValidators } from '@slck/ngx-requisite';
 
 @Component({
   selector: 'app-root',
@@ -95,6 +95,44 @@ new FormControl('', requisiteValidators.isNegative)
 ```typescript
 new FormControl('',requisiteValidators.decimalPrecision)
 ```
+
+### toCamelCaseKeys
+
+```typescript
+import { toCamelCaseKeys } from '@slck/ngx-requisite';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+})
+export class AppComponent implements OnInit  {
+  ngOnInit(): void {
+    const uncap = toCamelCaseKeys({
+      Name: '@slck/ngx-requisite',
+      Address: {
+        Home: 'uhi'
+      },
+      Urls: [
+        {Path: 'google', Location: 'us'}
+      ]
+    })
+  }
+}
+
+ -- output: 
+    {
+      name: '@slck/ngx-requisite',
+      address: {
+        home: 'uhi'
+      },
+      urls: [
+        {Path: 'google', Location: 'us'}
+      ]
+    }
+
+```
+
 # For developers
 To run the project : `npm start`
 Don't forget to run `npm test` and `npm lint` before each pull request. Thanks !

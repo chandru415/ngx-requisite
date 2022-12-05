@@ -1,11 +1,16 @@
 {
   "name": "@slck/ngx-requisite",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^15.0.0",
     "@angular/core": "^15.0.0",
     "lodash": "^4.17.21"
+  },
+  "engines": {
+    "node": "^14.20.0 || ^16.13.0 || >=18.10.0",
+    "yarn": ">=1.22.4 <2",
+    "npm": "Please use yarn instead of NPM to install dependencies"
   },
   "dependencies": {
     "tslib": "^2.3.0"
