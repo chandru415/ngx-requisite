@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { toCamelCaseKeys } from '@ngx-cks@ngx-requisite';
+import { toCamelCaseKeys } from '@slck/ngx-requisite';
 
 
 @Component({

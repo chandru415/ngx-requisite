@@ -1,6 +1,6 @@
 
 # NgxRequisite
-ngx-requisite library => custom Validators, Utility functions for common development.
+ngx-requisite library - custom Validators, Utility functions for common development.
 
 # Installation
 
@@ -13,6 +13,7 @@ npm i ngx-requisite --save
     - isObject
     - leadZeroForMonthOrDay
     - remainingDaysHoursFormTwoDates
+    - toCamelCaseKeys
 
 # Pipes
     - safeHtml
