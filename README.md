@@ -8,7 +8,7 @@
  <img src="https://img.shields.io/github/forks/chandru415/ngx-requisite" />
    <img src="https://img.shields.io/github/stars/chandru415/ngx-requisite" />
   
-  <a href="https://www.npmjs.com/package/ngx-requisite">
+  <a href="https://www.npmjs.com/package/@slck/ngx-requisite">
    <img src="https://img.shields.io/npm/dw/ngx-requisite" />
  </a>
  </p>
