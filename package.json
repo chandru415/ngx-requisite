@@ -21,11 +21,6 @@
     "build": "nx build",
     "test": "nx test"
   },
-  "engines": {
-    "node": "^14.20.0 || ^16.13.0 || >=18.10.0",
-    "yarn": ">=1.22.4 <2",
-    "npm": "Please use yarn instead of NPM to install dependencies"
-  },
   "keywords": [
     "angular",
     "validations",
@@ -49,7 +44,7 @@
     "@angular/platform-browser": "~15.0.0",
     "@angular/platform-browser-dynamic": "~15.0.0",
     "@angular/router": "~15.0.0",
-    "@nrwl/angular": "15.2.4",
+    "@nrwl/angular": "15.3.3",
     "lodash": "^4.17.21",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
@@ -63,13 +58,13 @@
     "@angular/cli": "~15.0.0",
     "@angular/compiler-cli": "~15.0.0",
     "@angular/language-service": "~15.0.0",
-    "@nrwl/cli": "15.2.4",
-    "@nrwl/cypress": "15.2.4",
-    "@nrwl/eslint-plugin-nx": "15.2.4",
-    "@nrwl/jest": "15.2.4",
-    "@nrwl/linter": "15.2.4",
-    "@nrwl/nx-cloud": "latest",
-    "@nrwl/workspace": "15.2.4",
+    "@nrwl/cli": "15.3.3",
+    "@nrwl/cypress": "15.3.3",
+    "@nrwl/eslint-plugin-nx": "15.3.3",
+    "@nrwl/jest": "15.3.3",
+    "@nrwl/linter": "15.3.3",
+    "@nrwl/nx-cloud": "15.0.2",
+    "@nrwl/workspace": "15.3.3",
     "@types/jest": "28.1.1",
     "@types/lodash": "^4.14.191",
     "@types/node": "16.11.7",
@@ -83,7 +78,7 @@
     "jest-environment-jsdom": "28.1.1",
     "jest-preset-angular": "~12.2.2",
     "ng-packagr": "~15.0.0",
-    "nx": "15.2.4",
+    "nx": "15.3.3",
     "postcss": "^8.4.5",
     "postcss-import": "~14.1.0",
     "postcss-preset-env": "~7.5.0",
@@ -94,3 +89,4 @@
     "typescript": "~4.8.2"
   }
 }
+

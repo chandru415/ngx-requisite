@@ -5,7 +5,7 @@ ngx-requisite library - custom Validators, Utility functions for common developm
 # Installation
 
 ```bash
-npm i @slck/ngx-requisite --save --save
+npm i @slck/ngx-requisite --save
 ```
 # Methods 
     - isNullOrUndefined
