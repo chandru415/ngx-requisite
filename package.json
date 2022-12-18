@@ -19,7 +19,8 @@
     "postinstall": "node ./decorate-angular-cli.js",
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "migrate": "nx migrate latest"
   },
   "keywords": [
     "angular",
@@ -51,11 +52,11 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~15.0.0",
+    "@angular-devkit/build-angular": "15.0.4",
     "@angular-eslint/eslint-plugin": "~14.0.4",
     "@angular-eslint/eslint-plugin-template": "~14.0.4",
     "@angular-eslint/template-parser": "~14.0.4",
-    "@angular/cli": "~15.0.0",
+    "@angular/cli": "15.0.4",
     "@angular/compiler-cli": "~15.0.0",
     "@angular/language-service": "~15.0.0",
     "@nrwl/cli": "15.3.3",

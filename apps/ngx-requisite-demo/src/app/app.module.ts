@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgxRequisiteModule } from '@ngx-requisite/ngx-requisite';
+import { NgxRequisiteModule } from '@slck/ngx-requisite';
 
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
